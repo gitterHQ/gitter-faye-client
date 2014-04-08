@@ -1,0 +1,14 @@
+{
+  "name": "faye-client",
+  "version": "0.0.1",
+  "description": "Node example client for the Gitter Faye API",
+  "main": "faye-client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@malditogeek",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "faye": "~1.0.1"
+  }
+}
