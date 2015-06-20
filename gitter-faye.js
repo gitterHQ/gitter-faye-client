@@ -32,7 +32,7 @@ ClientAuthExt.prototype.incoming = function(message, callback) {
 
 var SnapshotExt = function() {};
 
-ClientAuthExt.prototype.incoming = function(message, callback) {
+SnapshotExt.prototype.incoming = function(message, callback) {
   if(message.channel == '/meta/subscribe' && message.ext && message.ext.snapshot) { 
     console.log('Snapshot: ', message.ext.snapshot);
   }
@@ -50,7 +50,7 @@ var client = new Faye.Client('https://ws.gitter.im/faye', {timeout: 60, retry: 5
 client.addExtension(new ClientAuthExt());
 
 // Add Resource Snapshot extension
-//client.addExtension(new SnapshotExt());
+client.addExtension(new SnapshotExt());
 
 // A dummy handler to echo incoming messages
 var messageHandler = function(msg) {
